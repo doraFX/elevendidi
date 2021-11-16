@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Bomb.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/remixicon.css" />
+	</head>
+	<body>
+		<div class="head">
+			<div class="head-list" onclick="link1();">
+				HOME
+			</div>
+			<div class="head-list" onclick="link2();">
+				PARTICIPANTS
+			</div>
+			<div class="head-list" onclick="link3();">
+				WATCH
+			</div>
+			<div class="head-list" onclick="link4();">
+				CONTACT
+			</div>
+		</div>
+		<div class="banner" id="banner">
+			<div class="bannerup">
+				<div class="bannertext">
+					<h1>WE ARE THE</h1>
+					<h2>GROUP&nbsp;<span>ELEVEN</span></h2>
+				</div>
+			</div>
+		</div>
+		<div class="productioninfo" id="partici">
+			<div class="pi-director">
+				<h1>DIRECTED AND PRODUCED BY</h1>
+				<h2>HANS RICHTOFEN</h2>
+			</div>
+			<div class="pi-coproducer">
+				<div class="pi-coproducer-item">
+					<h1>CO-PRODUCERS</h1>
+					<h2>DORAFX&nbsp;&nbsp;TECH.DOG</h2>
+				</div>
+			</div>
+			<div class="pi-casting">
+				<h1>CASTING BY</h1>
+				<h2>MYSTERYZHS&nbsp;&nbsp;HANS RICHTOFEN<br>TECH.DOG&nbsp;&nbsp;DORAFX&nbsp;&nbsp;RIAKA<br>MR.CHEN</h2>
+			</div>
+			<div class="pi-edit">
+				<h1>EDITED BY</h1>
+				<h2>DORAFX</h2>
+			</div>
+			<div class="pi-postproduction">
+				<h1>POST-PRODUCTION BY</h1>
+				<h2>DORAFX</h2>
+			</div>
+		</div>
+		<div class="videoplay" id="video">
+			<div class="videoplay-head">
+				WATCH OUR EPISODES NOW
+			</div>
+			<div class="videoplay-contain">
+				<div class="videoplay-list" onclick="v1();">
+					<img src="img/pic1.webp">
+					<p><span>EPISODE 1</span>THE BULLY</p>
+				</div>
+				<div class="videoplay-list" onclick="v2();">
+					<img src="img/pic2.webp">
+					<p><span>EPISODE 2</span>JUNK ROOMMATES</p>
+				</div>
+				<div class="videoplay-list" onclick="v3();">
+					<img src="img/pic3.webp">
+					<p><span>EPISODE 3</span>COUNTER MODDER</p>
+				</div>
+				<div class="videoplay-list" onclick="v4();">
+					<img src="img/pic4.webp">
+					<p><span>EPISODE 4</span>ICEROOM COMBAT UTILITY</p>
+				</div>
+			</div>
+		</div>
+		<div class="contact" id="contact">
+			<div class="contact-head">
+				CONTACT
+			</div>
+			<div class="contact-head-des">
+				MAKE A CONNECTION WITH US
+			</div>
+			<div class="contact-push">
+				<input type="" name="" id="inputwords" value="" />
+				<div class="inputsend" onclick="send();">SEND</div>
+			</div>
+			<div class="contact-load" id="cl">
+
+			</div>
+		</div>
+		<div class="videoplay-full" id="vfull" style="display: none;">
+			<div class="videoplay-full-close" onclick="closevfull();">
+				<i class="ri-close-line"></i>
+			</div>
+			<div class="videoplay-full-con">
+				<video width="" height="" id="videofull" src="" controls=""></video>
+				<div class="videoplay-full-con-des">
+					<p id="videohead"><span>EPISODE</span></p>
+					<p id="videodescription"></p>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function v1() {
+				$("#vfull").show();
+				$("#videohead").html('<span>EPISODE 1</span>THE BULLY');
+				$("#videodescription").html(
+					'University student Zhang Genshuo got into trouble with himself these days. Some bad folks in his class want to punch him for his behaviors. He was stuck in a rare street one day……'
+					);
+				$("#videofull").attr("src","media/video1.mp4");
+			}
+
+			function v2() {
+				$("#vfull").show();
+				$("#videohead").html('<span>EPISODE 2</span>JUNK ROOMMATES');
+				$("#videodescription").html(
+					'Veggie Doggie was troubled because his roommates was too noisy. One day he got shouted at by one of his roommates for getting up early to study. How can he solve it……'
+					);
+				$("#videofull").attr("src","media/video2.mp4");
+			}
+
+			function v3() {
+				$("#vfull").show();
+				$("#videohead").html('<span>EPISODE 3</span>COUNTER MODDER');
+				$("#videodescription").html(
+					'Gaming time, Modder high. How can we get a proper way to strike hackers? The answer is……');
+				$("#videofull").attr("src","media/video3.mp4");
+			}
+
+			function v4() {
+				$("#vfull").show();
+				$("#videohead").html('<span>EPISODE 4</span>ICEROOM COMBAT UTILITY');
+				$("#videodescription").html(' There is a noisy customer in the ice room, what should the boss do with it……');
+			    $("#videofull").attr("src","media/video4.mp4");
+			}
+
+
+
+
+			function closevfull() {
+				setTimeout(function(){
+					$("#vfull").hide();
+					$("#videofull").attr("src","");
+				},120);
+			}
+		</script>
+		<script type="text/javascript">
+			function link1(){
+				window.location.href = "#banner";
+			}
+			
+			function link2(){
+				window.location.href = "#partici";
+			}
+			
+			function link3(){
+				window.location.href = "#video";
+			}
+			
+			function link4(){
+				window.location.href = "#contact";
+			}
+		</script>
+		<script type="text/javascript">
+			Bmob.initialize("735b35d7ba425c34", "669524");
+
+			const query = Bmob.Query("eleven");
+			query.find().then(res => {
+				//console.log(res);
+				length = res.length;
+				length = length + 1;
+				//console.log(length);
+				for (i = 0; i < length; i++) {
+					veri = res[i].verify;
+					//console.log(veri);
+					if (veri == true) {
+						p1 = '<div class="cl-list"><p>';
+						p2 = '</p></div>';
+						des = res[i].des;
+						pfull = p1 + des + p2;
+						$("#cl").append(pfull);
+					}
+				}
+			});
+
+			function send() {
+				words = $("#inputwords").val();
+				console.log(words);
+				const query = Bmob.Query('eleven');
+				query.set("verify", false);
+				query.set("des", words);
+				query.save().then(res => {
+					console.log(res)
+				}).catch(err => {
+					console.log(err)
+				})
+			}
+		</script>
+	</body>
+</html>
