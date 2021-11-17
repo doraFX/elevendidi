@@ -470,3 +470,11 @@ body {
 	font-size: 16px;
 	margin-left: 5px;
 }
+
+.contact-head-notice {
+	margin-top: 4px;
+	margin-bottom: 20px;
+	font-weight: 300;
+	font-size: 14px;
+	color: rgba(255,255,255,1);
+}
