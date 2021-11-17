@@ -229,6 +229,15 @@ body {
 	object-fit: cover;
 	margin-bottom: 5px;
 	border-radius: 4px;
+	transition: 0.12s ease-in-out;
+}
+
+.videoplay-list img:hover{
+	filter: brightness(0.9);
+}
+
+.videoplay-list img:active{
+	filter: brightness(0.8);
 }
 
 @media (max-width:600px) {
